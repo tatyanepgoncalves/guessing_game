@@ -1,0 +1,335 @@
+:root {
+  --zinc50: #fafafa;
+  --zinc100: #f4f4f5;
+  --zinc400: #a1a1aa;
+  --zinc900: #18181b;
+  --zinc950: #09090b;
+  --purple50: #d8b4fe;
+  --purple: #7c3aed;
+
+  --title-mobile: 2rem;
+  --subtitle-mobile: 1.5rem;
+
+
+  --title-tablet: 2.5rem;
+  --subtitle-tablet: 1.75rem;
+  --text-tablet: 1.125rem;
+
+  --title-desktop: 3.5rem;
+  --subtitle-desktop: 2.25rem;
+  --text-desktop: 1.25rem;
+
+
+  --text-base: 1rem;
+  --footer-mobile: 0.75rem;
+
+  --size-mobile: 30rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--text-base);
+  line-height: var(--lh-subtitle-mobile);
+}
+
+body {
+  background-color: var(--zinc50);
+  color: var(--zinc950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark {
+  background-color: var(--zinc950);
+  color: var(--zinc50);
+}
+
+body.dark select {
+  background-color: var(--zinc950);
+  color: var(--zinc50);
+}
+
+body.dark form {
+  background-color: var(--zinc900);
+}
+
+body.dark form input {
+  color: var(--zinc50);
+}
+
+body.dark #submit {
+  background-color: var(--purple50);
+  color: var(--zinc900);
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--text-base);
+  margin: var(--text-base);
+  padding-inline: var(--text-base);
+  max-width: var(--size-mobile);
+}
+
+header,
+main {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: var(--title-mobile);
+  line-height: var(--title-mobile);
+}
+
+#mode {
+  background-color: transparent;
+  color: var(--zinc950);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#mode span {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+body.dark #mode {
+  background-color: transparent;
+  color: var(--zinc50);
+  border: none;
+  cursor: pointer;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.game select {
+  background-color: transparent;
+  border: 1px solid #71717a;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem var(--text-base);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  height: 2.5rem;
+  color: var(--zinc950);
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+}
+
+select:focus {
+  border-color: #7c3aed;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+}
+
+form {
+  background-color: var(--zinc100);
+  padding: var(--title-mobile) 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+}
+
+.boxInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.boxInput label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.boxInput input {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #a1a1aa;
+  background-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+#submit {
+  padding: 0.75rem 1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--purple);
+  color: var(--zinc50);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 20px;
+  transition: all 0.5s;
+}
+
+#statusText {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+#statusText span {
+  font-size: var(--text-base);
+  line-height: var(--subtitle-mobile);
+}
+
+body.dark .bottom #statusText button, 
+.bottom #statusText button {
+  display: none;
+}
+
+.bottom #statusText button.visible {
+  display: block;
+  padding: 0.75rem var(--text-base);
+  border-radius: 0.5rem;
+  background-color: var(--purple);
+  color: var(--zinc50);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+body.dark .bottom #statusText button.visible {
+  display: block;
+  padding: 0.75rem var(--text-base);
+  border-radius: 0.5rem;
+  background-color: var(--purple50);
+  color: var(--zinc950);
+}
+
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.roles div {
+  padding: var(--text-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.roles div h2 {
+  color: var(--zinc950);
+  font-size: var(--text-base);
+  line-height:  1.5rem;
+}
+
+body.dark .roles div h2 {
+  color: var(--zinc50);
+}
+
+body.dark .roles div p {
+  color: var(--zinc100);
+}
+
+
+@media (width >= 48rem) and (width < 64rem) {
+  main.container {
+    margin-inline: var(--subtitle-mobile);
+    padding-inline: var(--subtitle-mobile);
+    min-width: 30.063rem;
+    max-width: 63.938rem;
+    gap: var(--subtitle-mobile);
+  }
+
+  header h1 {
+    font-size: var(--title-tablet);
+    line-height: 1;
+  }
+
+  #mode span {
+    font-size: var(--text-base);
+    line-height: var(--subtitle-mobile);
+  }
+
+  .game {
+    gap: 4rem;
+  }
+
+  .game select {
+    height: 3rem;
+    font-size: var(--text-base);
+    line-height: 1.5rem;
+    padding: var(--text-base);
+    max-width: 28.125rem;
+  }
+}
+
+@media (width >= 64rem) {
+  main.container {
+    margin-inline: var(--title-mobile);
+    padding-inline: var(--title-mobile);
+    min-width: 64rem;
+    max-width: 75rem;
+    gap: var(--title-mobile);
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+
+  header h1 {
+    font-size: var(--text-desktop);
+    line-height: 1;
+  }
+
+  #mode span {
+    font-size: var(--text-desktop);
+    line-height: var(--subtitle-tablet);
+  }
+
+  .game {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+  }
+
+
+  .top, .bottom {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .game select {
+    height: var(--title-desktop);
+    font-size: 1.125rem;
+    line-height: var(--subtitle-mobile);
+    padding: var(--text-base);
+  }
+
+  form {
+    margin: 0;
+  }
+}

@@ -46,7 +46,7 @@ O jogo usa funções clássicas do **Math** como ``Math.random()``, ``Math.floor
 ## 📸 Preview
 ![Prévia do jogo de adivinhação](./src/images/preview-dark.png)
 
-🔗 [Link da Demo](https://jogo-adivinhacao-devtatyane.vercel.app/)
+🔗 [Link da Demo](https://guessing-game-rust.vercel.app/)
 
 
 ## 📂 Estrutura do projeto
